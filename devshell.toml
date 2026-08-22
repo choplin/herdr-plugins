@@ -1,0 +1,3 @@
+[devshell]
+name = "my-go-project"
+packages = ["go", "gopls", "golangci-lint", "gofumpt", "gotools"]
