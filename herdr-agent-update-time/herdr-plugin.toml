@@ -1,0 +1,38 @@
+id = "choplin.agent-update-time"
+name = "Agent Update Time"
+version = "0.1.0"
+min_herdr_version = "0.8.2"
+description = "Show when each Agent semantic state was last observed changing"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["go", "build", "-trimpath", "-o", "herdr-agent-update-time", "./cmd/herdr-agent-update-time"]
+
+[[startup]]
+command = ["./herdr-agent-update-time"]
+
+[[actions]]
+id = "reconcile"
+title = "Reconcile Agent update times"
+contexts = ["pane", "workspace"]
+command = ["./herdr-agent-update-time"]
+
+[[events]]
+on = "pane.agent_detected"
+command = ["./herdr-agent-update-time"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["./herdr-agent-update-time"]
+
+[[events]]
+on = "pane.closed"
+command = ["./herdr-agent-update-time"]
+
+[[events]]
+on = "pane.exited"
+command = ["./herdr-agent-update-time"]
+
+[[events]]
+on = "pane.moved"
+command = ["./herdr-agent-update-time"]
