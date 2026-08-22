@@ -1,0 +1,50 @@
+id = "choplin.repository-identity"
+name = "Repository Identity"
+version = "0.1.0"
+min_herdr_version = "0.8.2"
+description = "Report each workspace's shared Git repository identity to the Space sidebar"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["go", "build", "-trimpath", "-o", "herdr-repository-identity", "./cmd/herdr-repository-identity"]
+
+[[startup]]
+command = ["./herdr-repository-identity"]
+
+[[actions]]
+id = "reconcile"
+title = "Reconcile repository identities"
+contexts = ["workspace"]
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "workspace.created"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "workspace.updated"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "workspace.focused"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "workspace.renamed"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "tab.focused"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "pane.created"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "pane.focused"
+command = ["./herdr-repository-identity"]
+
+[[events]]
+on = "pane.moved"
+command = ["./herdr-repository-identity"]
