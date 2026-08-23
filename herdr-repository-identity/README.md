@@ -1,6 +1,6 @@
 # Herdr Repository Identity
 
-> Add each workspace's shared Git repository name to Herdr's Space sidebar.
+Add each workspace's shared Git repository name to Herdr's Space sidebar.
 
 ![Two worktrees showing the same repository name in Herdr's Spaces sidebar](docs/repository-identity-annotated.png)
 

@@ -1,9 +1,7 @@
 # Herdr Plugins
 
-> Small workflow plugins for Herdr.
-
-This repository contains focused plugins that add useful metadata to the Herdr sidebars.
-Install either plugin independently from its subdirectory.
+This repository collects focused Herdr plugins, each built to solve one specific problem in
+day-to-day Herdr workflows.
 
 ## Plugins
 

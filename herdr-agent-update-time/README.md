@@ -1,6 +1,6 @@
 # Herdr Agent Update Time
 
-> Add the time of each Agent's last state change to Herdr's Agents sidebar.
+Add the time of each Agent's last state change to Herdr's Agents sidebar.
 
 ![Agents showing their latest state-change times in Herdr's Agents sidebar](docs/agent-update-time-annotated.png)
 
