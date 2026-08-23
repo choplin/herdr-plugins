@@ -17,11 +17,17 @@ See the shared Git repository name for each workspace, including worktrees of th
 
 ![Herdr Spaces sidebar showing one shared repository name across different worktrees](herdr-repository-identity/docs/repository-identity-annotated.png)
 
+### [Split Pane](herdr-split-pane/)
+
+Open a caller-provided command directly in a split pane without launching an intermediate login shell.
+
+![Lazygit opening in a right split pane in Herdr](herdr-split-pane/docs/split-pane-demo.gif)
+
 ## Prerequisites
 
 - Linux or macOS
 - Herdr 0.8.2 or later
-- Go 1.22 or later for installation
+- Go 1.22 or later for the Go-based plugins
 - Git for Repository Identity
 
 ## Development

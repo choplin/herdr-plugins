@@ -1,0 +1,16 @@
+id = "choplin.split-pane"
+name = "Split Pane"
+version = "0.1.0"
+min_herdr_version = "0.8.2"
+description = "Open a caller-provided command directly in a split pane"
+platforms = ["linux", "macos"]
+
+[[panes]]
+id = "command"
+title = "Command"
+placement = "split"
+command = [
+  "/bin/sh",
+  "-c",
+  "exec /bin/sh -c \"exec ${HERDR_SPLIT_COMMAND:?HERDR_SPLIT_COMMAND is required}\"",
+]
