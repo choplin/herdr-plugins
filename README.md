@@ -11,6 +11,13 @@ See when each Agent last changed state directly in Herdr's Agents sidebar.
 
 ![Herdr Agents sidebar showing the last state-change time for each Agent](herdr-agent-update-time/docs/agent-update-time-annotated.png)
 
+### [Next Agent](herdr-next-agent/)
+
+Move forward or backward through Agents in configured semantic states across all workspaces and
+tabs.
+
+![Moving forward and backward through blocked Agents](herdr-next-agent/docs/next-agent-demo.gif)
+
 ### [Repository Identity](herdr-repository-identity/)
 
 See the shared Git repository name for each workspace, including worktrees of the same repository.
@@ -22,30 +29,3 @@ See the shared Git repository name for each workspace, including worktrees of th
 Open a caller-provided command directly in a split pane without launching an intermediate login shell.
 
 ![Lazygit opening in a right split pane in Herdr](herdr-split-pane/docs/split-pane-demo.gif)
-
-## Prerequisites
-
-- Linux or macOS
-- Herdr 0.8.2 or later
-- Go 1.22 or later for the Go-based plugins
-- Git for Repository Identity
-
-## Development
-
-Enter the Nix development shell from the repository root:
-
-```sh
-nix develop
-```
-
-Run the test suite for each plugin from its directory:
-
-```sh
-cd herdr-agent-update-time
-go test ./...
-
-cd ../herdr-repository-identity
-go test ./...
-```
-
-See each plugin's README for local linking and usage details.
