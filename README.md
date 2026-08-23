@@ -18,6 +18,18 @@ tabs.
 
 ![Moving forward and backward through blocked Agents](herdr-next-agent/docs/next-agent-demo.gif)
 
+### [Quick Select](herdr-quickselect/)
+
+Select structured text with inline keyboard hints, then run configurable copy, open, or argv actions.
+
+#### Copy
+
+![Selecting and copying a visible terminal value with Herdr Quick Select](herdr-quickselect/assets/quickselect-copy.gif)
+
+#### Open URL
+
+![Selecting and opening a visible URL with Herdr Quick Select](herdr-quickselect/assets/quickselect-open-url.gif)
+
 ### [Repository Identity](herdr-repository-identity/)
 
 See the shared Git repository name for each workspace, including worktrees of the same repository.
