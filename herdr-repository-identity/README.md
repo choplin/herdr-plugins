@@ -19,6 +19,26 @@ The manifest builds a native binary during installation, so the plugin has no ru
 dependency. Git remains a runtime dependency because the plugin uses it to resolve repository
 identity.
 
+## Usage
+
+Add `$repo` to the Space sidebar layout in `~/.config/herdr/config.toml`:
+
+```toml
+[ui.sidebar.spaces]
+rows = [
+  ["state_icon", "$repo"],
+  ["branch", "git_status"],
+]
+```
+
+If `[ui.sidebar.spaces]` already exists, add `$repo` to its existing `rows` instead of adding a
+second table.
+
+Open or focus a workspace whose active tab is inside a Git repository. The Spaces sidebar now
+shows the repository name, such as `demo-project`. Worktrees from the same repository display the
+same name. If the working directory is outside a Git repository, the token displays the workspace
+label instead.
+
 ## How it works
 
 For each workspace, the plugin reads the working directory from its active tab and derives the

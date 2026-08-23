@@ -18,6 +18,25 @@ herdr plugin install choplin/herdr-plugins/herdr-agent-update-time
 The manifest builds a native binary during installation, so the plugin has no runtime language
 dependency.
 
+## Usage
+
+Add `$updated` to the Agent sidebar layout in `~/.config/herdr/config.toml`:
+
+```toml
+[ui.sidebar.agents]
+rows = [
+  ["state_icon", "workspace", "tab"],
+  ["agent", "$updated"],
+]
+```
+
+If `[ui.sidebar.agents]` already exists, add `$updated` to its existing `rows` instead of adding a
+second table.
+
+Start an Agent, or wait for a running Agent to change state. The Agents sidebar now shows the time
+next to the Agent name, such as `codex · 14:32`. The time changes when the Agent moves between
+semantic states such as `working`, `blocked`, `done`, or `idle`.
+
 ## How it works
 
 The plugin watches Agent detection and semantic state changes, tracks each Agent across pane
