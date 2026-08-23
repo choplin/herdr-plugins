@@ -9,21 +9,13 @@ day-to-day Herdr workflows.
 
 See when each Agent last changed state directly in Herdr's Agents sidebar.
 
-<img
-  src="herdr-agent-update-time/docs/agent-update-time-annotated.png"
-  alt="Herdr Agents sidebar showing the last state-change time for each Agent"
-  width="760"
->
+![Herdr Agents sidebar showing the last state-change time for each Agent](herdr-agent-update-time/docs/agent-update-time-annotated.png)
 
 ### [Repository Identity](herdr-repository-identity/)
 
 See the shared Git repository name for each workspace, including worktrees of the same repository.
 
-<img
-  src="herdr-repository-identity/docs/repository-identity-annotated.png"
-  alt="Herdr Spaces sidebar showing one shared repository name across different worktrees"
-  width="760"
->
+![Herdr Spaces sidebar showing one shared repository name across different worktrees](herdr-repository-identity/docs/repository-identity-annotated.png)
 
 ## Prerequisites
 
