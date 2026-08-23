@@ -5,14 +5,32 @@ day-to-day Herdr workflows.
 
 ## Plugins
 
-| Plugin | What it shows | Install |
-| --- | --- | --- |
-| [Agent Update Time](herdr-agent-update-time/) | The local time when each Agent's semantic state last changed | `herdr plugin install choplin/herdr-plugins/herdr-agent-update-time` |
-| [Repository Identity](herdr-repository-identity/) | The shared Git repository identity for each workspace | `herdr plugin install choplin/herdr-plugins/herdr-repository-identity` |
+### [Agent Update Time](herdr-agent-update-time/)
 
-Both plugins support Linux and macOS and require Herdr 0.8.2 or newer. Installation builds a
-native binary, so Go 1.22 or newer must also be available on the machine performing the install.
-Repository Identity additionally requires Git at runtime.
+See when each Agent last changed state directly in Herdr's Agents sidebar.
+
+<img
+  src="herdr-agent-update-time/docs/agent-update-time-annotated.png"
+  alt="Herdr Agents sidebar showing the last state-change time for each Agent"
+  width="760"
+>
+
+### [Repository Identity](herdr-repository-identity/)
+
+See the shared Git repository name for each workspace, including worktrees of the same repository.
+
+<img
+  src="herdr-repository-identity/docs/repository-identity-annotated.png"
+  alt="Herdr Spaces sidebar showing one shared repository name across different worktrees"
+  width="760"
+>
+
+## Prerequisites
+
+- Linux or macOS
+- Herdr 0.8.2 or later
+- Go 1.22 or later for installation
+- Git for Repository Identity
 
 ## Development
 
