@@ -1,0 +1,20 @@
+[submodule "herdr-agent-update-time"]
+	path = herdr-agent-update-time
+	url = https://github.com/choplin/herdr-agent-update-time.git
+	branch = main
+[submodule "herdr-next-agent"]
+	path = herdr-next-agent
+	url = https://github.com/choplin/herdr-next-agent.git
+	branch = main
+[submodule "herdr-quickselect"]
+	path = herdr-quickselect
+	url = https://github.com/choplin/herdr-quickselect.git
+	branch = main
+[submodule "herdr-repository-identity"]
+	path = herdr-repository-identity
+	url = https://github.com/choplin/herdr-repository-identity.git
+	branch = main
+[submodule "herdr-split-pane"]
+	path = herdr-split-pane
+	url = https://github.com/choplin/herdr-split-pane.git
+	branch = main
