@@ -15,8 +15,8 @@ import (
 	"github.com/choplin/herdr-quickselect/internal/placeholder"
 )
 
-// FileName is the Quick Select configuration beside Herdr's config.toml.
-const FileName = "quickselect.toml"
+// FileName is the Quick Select configuration in Herdr's plugin config directory.
+const FileName = "config.toml"
 
 // Config describes the complete picker configuration.
 type Config struct {
@@ -89,18 +89,12 @@ func Defaults() Config {
 	}
 }
 
-// Path resolves Quick Select configuration beside Herdr's main configuration.
-func Path(herdrConfigPath, xdgConfigHome, home string) string {
-	if herdrConfigPath != "" {
-		return filepath.Join(filepath.Dir(herdrConfigPath), FileName)
+// Path resolves Quick Select configuration in Herdr's plugin config directory.
+func Path(pluginConfigDirectory string) string {
+	if pluginConfigDirectory == "" {
+		return ""
 	}
-	if xdgConfigHome != "" {
-		return filepath.Join(xdgConfigHome, "herdr", FileName)
-	}
-	if home != "" {
-		return filepath.Join(home, ".config", "herdr", FileName)
-	}
-	return ""
+	return filepath.Join(pluginConfigDirectory, FileName)
 }
 
 // Load merges a Quick Select configuration file over the built-in entries by ID.

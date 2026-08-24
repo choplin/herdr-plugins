@@ -69,12 +69,7 @@ func launch(ctx context.Context, commandID string, environment []string) (result
 		return err
 	}
 	defer func() { result = errors.Join(result, lock.Release()) }()
-	home, _ := os.UserHomeDir()
-	configPath := config.Path(
-		environmentOr(environment, "HERDR_CONFIG_PATH", ""),
-		environmentOr(environment, "XDG_CONFIG_HOME", ""),
-		home,
-	)
+	configPath := config.Path(pluginConfigDirectory)
 	cfg, err := config.Load(configPath)
 	if err != nil {
 		return err

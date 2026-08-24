@@ -92,16 +92,15 @@ Select assigns hints to at most 676 unique values in one viewport.
 
 ## Configuration model
 
-Quick Select reads `quickselect.toml` beside Herdr's `config.toml`. With the default Herdr
-configuration path, create it at `${XDG_CONFIG_HOME:-$HOME/.config}/herdr/quickselect.toml`:
+Quick Select reads `config.toml` from Herdr's plugin-specific configuration directory. Open that
+directory and create the file with:
 
 ```sh
-${EDITOR:-vi} "${XDG_CONFIG_HOME:-$HOME/.config}/herdr/quickselect.toml"
+CONFIG_DIR="$(herdr plugin config-dir choplin.quickselect)"
+${EDITOR:-vi} "$CONFIG_DIR/config.toml"
 ```
 
-When `HERDR_CONFIG_PATH` points to another Herdr configuration, Quick Select reads
-`quickselect.toml` from that file's directory. The file is optional; built-in configuration is
-used when it does not exist.
+The file is optional; built-in configuration is used when it does not exist.
 
 Configuration has three reusable object types:
 

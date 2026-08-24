@@ -145,21 +145,18 @@ argv = ["consume", "$${value}"]
 	}
 }
 
-func TestPathUsesHerdrConfigDirectory(t *testing.T) {
+func TestPathUsesPluginConfigDirectory(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
-		herdrConfig string
-		xdg         string
-		home        string
-		want        string
+		pluginConfigDirectory string
+		want                  string
 	}{
-		{herdrConfig: "/profiles/work/config.toml", xdg: "/ignored", home: "/home/user", want: "/profiles/work/quickselect.toml"},
-		{xdg: "/xdg", home: "/home/user", want: "/xdg/herdr/quickselect.toml"},
-		{home: "/home/user", want: "/home/user/.config/herdr/quickselect.toml"},
+		{pluginConfigDirectory: "/plugins/config/choplin.quickselect", want: "/plugins/config/choplin.quickselect/config.toml"},
+		{},
 	}
 	for _, test := range tests {
-		if got := Path(test.herdrConfig, test.xdg, test.home); got != test.want {
+		if got := Path(test.pluginConfigDirectory); got != test.want {
 			t.Errorf("Path() = %q, want %q", got, test.want)
 		}
 	}
