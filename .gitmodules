@@ -1,6 +1,6 @@
-[submodule "herdr-agent-update-time"]
-	path = herdr-agent-update-time
-	url = https://github.com/choplin/herdr-agent-update-time.git
+[submodule "herdr-agent-metadata"]
+	path = herdr-agent-metadata
+	url = https://github.com/choplin/herdr-agent-metadata.git
 	branch = main
 [submodule "herdr-next-agent"]
 	path = herdr-next-agent

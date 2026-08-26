@@ -20,11 +20,12 @@ git submodule update --init --recursive
 
 ## Plugins
 
-### [Agent Update Time](https://github.com/choplin/herdr-agent-update-time)
+### [Agent Metadata](https://github.com/choplin/herdr-agent-metadata)
 
-See when each Agent last changed state directly in Herdr's Agents sidebar.
+Add useful derived Agent metadata such as the latest state-change time and a meaningful terminal
+title.
 
-![Herdr Agents sidebar showing the last state-change time for each Agent](https://raw.githubusercontent.com/choplin/herdr-agent-update-time/main/docs/agent-update-time-annotated.png)
+![Herdr Agents sidebar showing the updated token](https://raw.githubusercontent.com/choplin/herdr-agent-metadata/main/docs/agent-update-time-annotated.png)
 
 ### [Next Agent](https://github.com/choplin/herdr-next-agent)
 
